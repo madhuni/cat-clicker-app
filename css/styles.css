@@ -8,8 +8,18 @@
 
 .cat-image-container,
 .click-counter {
-    margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.cat-image {
+    margin: 0 auto 10px;
+    box-shadow: 5px 5px 5px lightgrey;
+}
+
+.cat-image:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px lightgrey;
+    transition: all 0.3s ease;
 }
 
 hr {
@@ -18,6 +28,7 @@ hr {
 
 .well {
     margin-right: 10px;
+    margin-left: 10px;
 }
 
 #cat-list-container {
@@ -29,6 +40,9 @@ hr {
     list-style: none;
     padding: 0;
     text-align: center;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .list-items {
@@ -36,10 +50,12 @@ hr {
     padding: 10px;
     background-color: black;
     color: white;
-    margin-bottom: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .list-items:hover {
+    cursor: pointer;
     background-color: grey;
     font-weight: bold;
     color: black;
