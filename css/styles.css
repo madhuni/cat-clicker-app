@@ -1,0 +1,47 @@
+#cat-count-container {
+    border: 2px solid grey;
+}
+
+#cat-count-container h4 {
+    font-weight: bold;
+}
+
+.cat-image-container,
+.click-counter {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+hr {
+    margin-bottom: 0;
+}
+
+.well {
+    margin-right: 10px;
+}
+
+#cat-list-container {
+    border: 2px solid grey;
+    margin: 0 10px 10px;
+}
+
+#cat-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.list-items {
+    font-size: 16px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.list-items:hover {
+    background-color: grey;
+    font-weight: bold;
+    color: black;
+    transition: all .3s ease;
+}
