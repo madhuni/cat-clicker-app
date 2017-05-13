@@ -1,4 +1,5 @@
 $(function () {
+    /* Creating the model for the project */
     var model = {
         cats: [{
             name: "Mr. Tom",
@@ -22,7 +23,8 @@ $(function () {
             id: 4
     }]
     };
-
+    
+    /* Creating the controller for the project. It will communicate between model and view */
     var controller = {
         getCats: function () {
             return model.cats;
@@ -32,7 +34,9 @@ $(function () {
             view.init();
         }
     };
-
+    
+    /* This view will display the list of cats in the app. The list will contains the
+    name of the cats to be chosen by user. */
     var listView = {
         init: function () {
             var cats = controller.getCats();
@@ -48,11 +52,12 @@ $(function () {
             }
         }
     };
-
+    
+    /* This view object will render the "no of clicks" and "cat-image" on the app. */
     var view = {
         init: function () {
             var catItems = $("#cat-list").find(".list-items");
-            this.selectCat(catItems);
+            this.selectCat(catItems); // Initializing the 'selectCat' method to get the cat object
         },
         renderClicks: function (cat) {
             var catElement = $(".cat-image");
@@ -73,13 +78,14 @@ $(function () {
             template.parentElement.appendChild(clone);
         },
         selectCat: function (catItems) {
-            var cats = controller.getCats();
+            var cats = controller.getCats(); // getting 'cats' from model through controller
             for (var i = 0; i < catItems.length; i++) {
-                var cat = catItems[i];
+                var cat = catItems[i]; // getting individual cat from list
+                /* Using 'closures' in order to bind the 'click' event to each individual cat */
                 $(cat).on("click", (function (cat) {
                     return function (event) {
-                        var catName = $(cat).text();
-                        $("#cat-count-container .row:last").remove();
+                        var catName = $(cat).text(); //getting cat-name from the list
+                        $("#cat-count-container .row:last").remove(); // removing the elements from display block (if any exists) so that there be always be single cat picture and count-container
                         for (var i = 0; i < cats.length; i++) {
                             if (cats[i].name === catName) {
                                 view.renderCat(cats[i]);
