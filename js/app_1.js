@@ -21,6 +21,11 @@ $(function () {
             imgSrc: "images/cat-image-4.jpg",
             count: 0,
             id: 4
+    }, {
+            name: "Miss Cutee",
+            imgSrc: "images/cat-image-5.jpg",
+            count: 0,
+            id: 5
     }]
     };
     
@@ -85,7 +90,8 @@ $(function () {
                 $(cat).on("click", (function (cat) {
                     return function (event) {
                         var catName = $(cat).text(); //getting cat-name from the list
-                        $("#cat-count-container .row:last").remove(); // removing the elements from display block (if any exists) so that there be always be single cat picture and count-container
+                        $("#cat-count-container .admin-row:last").remove();
+                        $("#cat-count-container .cat-row:last").remove(); // removing the elements from display block (if any exists) so that there be always be single cat picture and count-container
                         for (var i = 0; i < cats.length; i++) {
                             if (cats[i].name === catName) {
                                 view.renderCat(cats[i]);
