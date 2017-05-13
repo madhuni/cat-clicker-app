@@ -24,10 +24,10 @@
                 </ul>
             </div>
             <div id="cat-count-container" class="col-sm-8">
-               <h2 class="text-center">Your cats will display here</h2>
-               <hr>
+                <h2 class="text-center">Your cats will display here</h2>
+                <hr>
                 <template id="temp">
-                    <div class="row">
+                    <div class="row cat-row">
                         <h2 class="cat-name text-center"></h2>
                         <div class="cat-image-container col-sm-7">
                             <img src="" class="cat-image img-responsive" width="400" height="400">
@@ -36,6 +36,27 @@
                             <h4 class="text-center">No Of Clicks</h4>
                             <h2 class="display-count text-center"></h3>
                         </div>
+                    </div>
+                    <div class="row admin-row">
+                        <div id="admin-button-container" class="col-xs-3 col-sm-3">
+                            <button type="button" class="btn btn-primary ">Admin</button>   
+                        </div>
+                        <form class="col-xs-8 col-sm-8">
+                            <table class="form-table">
+                                <tr class="table-row">
+                                    <td class="row-item">Name:</td>
+                                    <td class="row-item"><input type="input"></td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="row-item">Image Url:</td>
+                                    <td class="row-item"><input type="input"></td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="row-item"><button type="button" class="btn btn-primary">Update</button></td>
+                                    <td class="row-item"><button type="button" class="btn btn-default">Cancel</button></td>
+                                </tr>
+                            </table>
+                        </form>                         
                     </div>
                </template>
        </div>
