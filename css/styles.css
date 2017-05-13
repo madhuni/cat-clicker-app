@@ -61,3 +61,16 @@ hr {
     color: black;
     transition: all .3s ease;
 }
+
+#admin-button-container,
+#admin-form {
+    margin-bottom: 10px;
+}
+
+.row-item {
+    padding: 5px;
+}
+
+.form-button {
+    margin-right: 5px;
+}
