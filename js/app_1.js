@@ -47,6 +47,8 @@ $(function () {
             if (cat.displayAdmin === false) {
                 $("#admin-form").addClass('no-display');
             }
+            
+            var adminBtn = $("#admin-btn");
         },
         selectCat: function (catItems) {
             var cats = this.getCats(); // getting 'cats' from model through controller
