@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <title>Cat Clicker App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</header>
+
+<body>
+    <header class="page-header">
+        <h1 class="text-center">Cat Clicker App</h1>
+    </header>
+    <div id="wrapper" class="container">
+        <div class="row">
+            <div id="cat-list-container" class="col-sm-3">
+                <h4 class="text-center">Choose your cat</h4>
+                <ul id="cat-list">
+                    <template id="list-temp">
+                        <li class="list-items"></li>
+                    </template>
+                </ul>
+            </div>
+            <div id="cat-count-container" class="col-sm-8">
+                <h2 class="text-center">Your cats will display here</h2>
+                <hr>
+                <template id="temp">
+                    <div class="row cat-row">
+                        <h2 class="cat-name text-center"></h2>
+                        <div class="cat-image-container col-sm-7">
+                            <img src="" class="cat-image img-responsive" width="400" height="400">
+                        </div>
+                        <div class="click-counter well col-sm-4">
+                            <h4 class="text-center">No Of Clicks</h4>
+                            <h2 class="display-count text-center"></h3>
+                        </div>
+                    </div>
+                    <div class="row admin-row">
+                        <div id="admin-button-container" class="col-xs-3 col-sm-3">
+                            <button type="button" id="admin-btn" class="btn btn-primary">Admin</button>
+                        </div>
+                        <form id="admin-form" class="col-xs-8 col-sm-8">
+                            <table class="form-table">
+                                <tr class="table-row">
+                                    <td class="row-item">Name:</td>
+                                    <td class="row-item"><input type="input"></td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="row-item">Image Url:</td>
+                                    <td class="row-item"><input type="input"></td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="row-item"></td>
+                                    <td class="row-item">
+                                        <button id="update-btn" type="button" class="form-button btn btn-primary">Update</button>
+                                        <button id="cancel-btn" type="button" class="form-button btn btn-default">Cancel</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>                         
+                    </div>
+               </template>
+           </div>
+       </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/app_1.js"></script>
+</body>
+
+</html>
