@@ -4,10 +4,12 @@ var model = {
         name: "Mr. Tom",
         imgSrc: "images/cat-image.jpg",
         count: 0,
+        viewPanal: false
     }, {
         name: "Mr. Tommy",
         imgSrc: "images/cat-image-2.jpg",
         count: 0,
+        viewPanal: true
     }]
 };
 
@@ -16,6 +18,7 @@ var controller = {
         model.currentCat = model.cats[0];
         catListView.init();
         catView.init();
+        adminView.init();
     },
     getCats: function () {
         return model.cats;
@@ -31,6 +34,10 @@ var controller = {
         model.currentCat.count++;
         //console.log(model.currentCat.count);
         catView.render();
+        adminView.render();
+    },
+    updateData: function () {
+        
     }
 };
 
@@ -57,6 +64,7 @@ var catListView = {
                 if (name === cat.name) {
                     controller.setCat(cat);
                     catView.render();
+                    adminView.render();
                 }
             }
         });
@@ -85,4 +93,22 @@ var catView = {
     },
 };
 
+var adminView = {
+    init: function () {
+        this.nameInput = $("#admin-cat-name input");
+        this.urlInput = $("#admin-img-url input");
+        this.countInput = $("#admin-cat-count input");
+        this.adminButton = $("#admin-btn");
+        this.updateButton = $("#update-btn");
+        this.cancelButton = $("#cancel-btn");
+        
+        this.render();
+    },
+    render: function () {
+        var currentCat = controller.getCurrentCat();
+        this.nameInput.attr("placeholder", currentCat.name);
+        this.urlInput.attr("placeholder", currentCat.imgSrc);
+        this.countInput.attr("placeholder", currentCat.count);
+    }
+};
 controller.init();
